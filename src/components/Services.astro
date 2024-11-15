@@ -1,0 +1,81 @@
+---
+import CodeBracketIcon from "@icons/CodeBracket.astro";
+import ChevronRightIcon from "@icons/Arrow-right.astro";
+
+const SERVICES = [
+	{
+		title: "Cómputo",
+		link: "#",
+		description: "Accesorios de computo, all in one, desktops, monitores, laptops, impresoras, tablets y más. ",
+		icon: "/services/computer-desktop.svg",
+	},
+	{
+		title: "Soluciones cloud",
+		link: "",
+		description: "Microsoft 365 Business Standard, windows 11, Office Hogar y Empresas y otros.",
+		icon: "/services/cloud.svg",
+	},
+	{
+		title: "Servicios en TI",
+		link: "",
+		description: "Servicio técnico mantenimiento de equipos informáticos, limpieza y sanitización de data center y instalación de redes LAN.",
+		icon: "/services/setting.svg",
+	},
+	{
+		title: "Desarrollo y soluciones de software",
+		link: "",
+		description: "Diseño y desarrollo de páginas web, Apps, ecoomerce y desarrollo de software a medida",
+		icon: "/services/code-bracket.svg ",
+	},
+	{
+		title: "Útiles y oficina",
+		link: "",
+		description: "Artículos de oficina, cuadernos y papalería, lápices y lapiceros, útiles ecolares",
+		icon: "/services/calculator.svg",
+	},
+	{
+		title: "Construcción y herramientas",
+		link: "",
+		description:
+			"Electricidad, ferretería, gasfiteria, herramientas, materiales de construcción, pinturas y acabados, pisos cerámicos y seguridad",
+		icon: "/services/building.svg",
+	},
+];
+---
+
+<section class="w-full h-auto text-just-white relative">
+	<span class="absolute -top-5 left-[calc(50%-40px/2)]"
+		><CodeBracketIcon class="text-teal-300 size-10" />
+	</span>
+	<div class="max-w-3xl justify-center items-center pb-5 mx-auto px-4">
+		<h2 class="font-medium text-xl text-center pt-14 text-neutral-700 dark:text-gray-200 uppercase">
+			Productos, servicios y soluciones para tu negocio
+		</h2>
+		<p class="pt-4 font-normal text-xl text-center [&>strong]:text-primary">
+			¿Estás buscando <strong>información</strong> sobre algo específico o necesitas
+			conocer más sobre nuestros <strong>productos y servicios</strong> en particular?
+		</p>
+	</div>
+	<section
+		class="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3 justify-center md:justify-center pb-4 [&>article]:bg-gradient-to-r from-indigo-500 from-10% via-purple-500 via-30% to-rose-500 to-90% [&>article>h3]:text-white [&>article>ul>li]:text-white"
+	>
+		{
+			SERVICES.map(({ title, link, description, icon }) => (
+				<article class="card [&>ul>li]:flex p-4 m-4 rounded-md min-w-72 max-w-96 border-2 border-solid border-gray-500 hover:border-teal-500 transition hover:scale-105 ">
+					<img src={icon} class="size-6" alt={title} />
+					<h3 class="font-bold text-xl pt-3">{title}</h3>
+					<ul class="pb-4">
+						<li>{description}</li>
+					</ul>
+					<a
+						href={link}
+						role="link"
+						class="inline-flex items-center text-emerald-400 font-medium text-lg"
+					>
+						Ver más <ChevronRightIcon />
+					</a>
+				</article>
+			))
+		}
+	</section>
+</section>
