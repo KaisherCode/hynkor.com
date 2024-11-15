@@ -1,0 +1,52 @@
+---
+import EmailIcon from "@icons/Email.astro";
+import WhatsAppIcon from "@icons/WhatsApp.astro";
+import AcctionButton from "@components/ActionButton.astro";
+---
+
+<section
+	class="mx-auto grid max-w-[85rem] gap-4 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 lg:px-8 2xl:max-w-full"
+>
+	<div class="order-2 md:order-1">
+		<h1
+			class="block text-3xl font-bold tracking-tight text-neutral-700 dark:text-neutral-200 sm:text-4xl lg:text-5xl lg:leading-tight"
+		>
+			Productos y Servicios que Ofrecesmos en <span class="text-primary"
+				>Hynkor</span
+			>
+		</h1>
+
+		<p
+			class="mt-3 text-pretty text-lg leading-relaxed text-neutral-700 dark:text-neutral-400 lg:w-4/5 dark:[&>strong]:text-primary/80 [&>strong]:text-primary [&>strong]:font-semibold"
+		>
+			Somos una empresa líder en la venta de productos <strong
+				>informáticos de alta calidad</strong
+			>, comprometidos con ofrecer <strong
+				>soluciones innovadoras y eficientes</strong
+			> para satisfacer las necesidades de nuestros clientes.
+		</p>
+		<p
+			class="mt-3 text-pretty text-lg leading-relaxed text-neutral-700 dark:text-neutral-400 lg:w-4/5 dark:[&>strong]:text-primary/80 [&>strong]:text-primary [&>strong]:font-semibold"
+		>
+			Productos | Servicios | Soluciones
+		</p>
+
+		<div class="mt-7 grid w-full gap-3 sm:inline-flex">
+			<AcctionButton href="mailto:ventas@hynkor.com">
+				<EmailIcon class="size-4" />
+				Contáctenos
+			</AcctionButton>
+
+			<AcctionButton href="https://wa.link/cy1fgw">
+				WhatsApp
+				<WhatsAppIcon class="size-4" />
+			</AcctionButton>
+		</div>
+	</div>
+	<!-- Hero Image Section -->
+	<div class="flex w-full order-1 md:order-2">
+		<div class="top-12 overflow-hidden">
+			<img src="/hero-image.svg" alt="imagen del hero" />
+		</div>
+	</div>
+</section>
