@@ -1,14 +1,14 @@
 ---
-const bgColorClasses = "bg-gray-100 dark:bg-gray-800 hover:bg-teal-300/80 hover:dark:bg-gray-200 hover:dark:text-gray-800 "
+const bgColorClasses = "bg-secondary dark:bg-gray-800 hover:bg-primary/50 hover:dark:bg-gray-200 hover:dark:text-gray-800 "
 const baseClasses = "inline-flex px-4 py-1 gap-2 justify-center items-center text-gray-800 text-base rounded-lg transition hover:scale-110"
-const borderClasses = "border border-gray-200 hover:border-gray-300"
+const borderClasses = "border hover:border-pink-300"
 ---
 <a
 	{...Astro.props}
 	target="_blank"
 	role="link"
 	rel="noopener noreferrer"
-	class={`dark:text-white focus-visible:ring-yellow-500/80 hover:text-white  focus:outline-none focus-visible:outline-none focus-visible:ring-white focus-visible:ring-offset-2 ${baseClasses} ${bgColorClasses} ${borderClasses}`}
+	class={`text-white hover:text-white  focus:outline-none focus-visible:outline-none focus-visible:ring-white focus-visible:ring-offset-2 ${baseClasses} ${bgColorClasses} ${borderClasses}`}
 >
 	<slot />
 </a>
