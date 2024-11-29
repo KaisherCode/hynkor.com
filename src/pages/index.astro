@@ -1,18 +1,39 @@
 ---
-import Hero from '@components/Hero.astro';
-import SectionContainer from '@components/SectionContainer.astro';
-import Layout from '@layouts/Layout.astro';
-import Services from '@components/Services.astro';
+import Hero from "@components/Hero.astro";
+import SectionContainer from "@components/SectionContainer.astro";
+import Layout from "@layouts/Layout.astro";
+import Services from "@components/Services.astro";
+import Projects from "@components/Projects.astro";
+import Features from "@components/Features.astro";
+import About from "@components/About.astro";
 ---
 
-<Layout title="Hynkor - Encuentra los productos tecnológicos y nuestros servicios que prestamos.">
+<Layout
+	title="Hynkor - Encuentra los productos tecnológicos y nuestros servicios que prestamos."
+>
 	<SectionContainer class="lg:py-4 py-2">
 		<Hero>
-			<slot/>
+			<slot />
 		</Hero>
 	</SectionContainer>
 	<SectionContainer id="services">
-		<Services/>
+		<Services />
+	</SectionContainer>
+	<SectionContainer id="projects">
+		<div class="px-4">
+			<h2 class="text-lg font-semibold text-center pt-14 text-primary">
+				Nuestros Projectos
+			</h2>
+			<p class="font-semibold text-3xl text-center pb-14 max-w-xl mx-auto">
+				Los últimos Proyectos más Importantes y Casos de Éxito.
+			</p>
+		</div>
+		<Projects />
+	</SectionContainer>
+	<SectionContainer id="features">
+		<Features />
+	</SectionContainer>
+	<SectionContainer>
+		<About />
 	</SectionContainer>
 </Layout>
-
