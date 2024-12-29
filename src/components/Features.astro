@@ -4,38 +4,42 @@ const FEATURES = [
 	{
 		title: "Instalación y configuración de software",
 		description:
-			"Licenciamiento de windows 11, office 365 business y antivirus",
+			"Licenciamiento de Sistema Operativo windows 11, office 365 business y antivirus",
+		link: "#"
 	},
 	{
 		title: "Limpieza y sanitización de data center",
 		description:
 			"Limpieza de piso técnico, gabinetes, cielo raso, paredes y suelos del sistema data center.",
+		link: "#"
 	},
 	{
-		title: "Mantenimiento preventivo y correctivo de harware",
+		title: "Mantenimiento de harware y software",
 		description:
 			"Limpieza de laptops, computadores de mesa y actualizaciones de drivers.",
+		link: "#"
 	},
 	{
 		title: "Diseño y desarrollo de sitio web",
 		description:
 			"Diseñamos y desarrollamos páginas web modernas, elegantes y funcionales.",
+		link: "#"
 	},
 ];
 ---
 
-<section class="pb-10">
+<section class="w-full pb-10 min-w-80">
 	<div
-		class="flex justify-center items-center h-80 overflow-x-auto snap-proximity lg:overflow-x-hidden overscroll-x-contain lg:gap-8 gap-4 pb-5"
+		class="flex lg:justify-center h-80 overflow-x-auto snap-proximity lg:overflow-x-hidden lg:space-x-8 space-x-4 px-4 overscroll-x-contain pb-5"
 	>
 		{
 			FEATURES.map(({ title, description }) => (
-				<article class="min-h-60 min-w-52 max-w-80 rounded-xl bg-just-white mt-5 shadow-md hover:-translate-y-4 transition-all duration-500 dark:bg-gray-800 border border-white bg-white hover:bg-gray-100 dark:hover:bg-gray-700 p-4">
+				<article class="min-h-60 min-w-48 max-w-72 rounded-xl bg-just-white mt-5 shadow-md hover:-translate-y-4 transition-all duration-500 dark:bg-gray-800 border border-white bg-white hover:bg-gray-100 dark:hover:bg-gray-700 p-4">
 					<div class="p-2">
-						<h3 class=" pb-4 text-lg font-medium">{title}</h3>
-						<p class=" text-sm dark:text-gray-400 pb-5">{description}</p>
+						<h3 class="pb-4 lg:text-xl text-base font-medium">{title}</h3>
+						<p class="lg:text-base text-sm dark:text-gray-400 pb-5">{description}</p>
 						<a href="#" class="flex items-center gap-2">
-							Escoge este
+							Explorar más...
 							<CircleArrowRight />
 						</a>
 					</div>
